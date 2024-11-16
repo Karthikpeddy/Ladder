@@ -8,9 +8,12 @@ export default function Navbar() {
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex items-center">
-            <a href="#" className="text-2xl font-bold text-gray-900">Ladder</a>
-          </div>
+        <div className="flex items-center">
+  <a href="#" className="text-2xl font-bold text-gray-900">
+    &lt;div&gt;
+  </a>
+</div>
+
           
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-gray-600 hover:text-gray-900">Services</a>
