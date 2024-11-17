@@ -27,10 +27,13 @@ export default function Hero() {
             Get Started
             <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </button>
-          <button className="relative border border-gray-200 px-8 py-4 rounded-full flex items-center justify-center gap-2 hover:shadow-lg hover:scale-105 group bg-white">
-            View Our Work
-            <span className="absolute inset-0 w-full h-full rounded-full transform scale-0 group-hover:scale-100 group-hover:border-2 group-hover:border-black transition-all duration-500"></span>
-          </button>
+          {/* View Our Work Button */}
+          <button className="relative flex items-center justify-center view-work-btn">
+  <svg viewBox="0 0 180 60">
+    <rect x="0" y="0" width="180" height="60" rx="30" ry="30"></rect>
+  </svg>
+  <span>View Our Work</span>
+</button>
         </div>
       </div>
     </div>

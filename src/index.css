@@ -13,19 +13,51 @@
     color: transparent;
     animation: fadeInAndGlow 1.5s ease-out forwards, shine 3s linear infinite;
   }
-  .spark {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
-    border-radius: 50%;
-    transform: translateY(-50%);
-    animation: spark 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    filter: blur(2px);
+  .view-work-btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: black; /* Button background color */
+    /* Line color (white) */
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
+  .view-work-btn svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: white; /* Set the line color to white */
+    stroke-width: 3px; /* Line thickness */
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: stroke-dashoffset 0.3s ease; /* Smooth reset */
+  }
   
+  .view-work-btn span {
+    color: white; /* Text color */
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold font */
+    z-index: 10;
+    position: relative;
+  }
   
+  /* Hover State */
+  .view-work-btn:hover svg {
+    animation: dashLoop 2s ease-in-out infinite alternate; /* Animation activates on hover */
+  }
   
+  /* Keyframes for back-and-forth animation */
+  @keyframes dashLoop {
+    from {
+      stroke-dashoffset: 150;
+    }
+    to {
+      stroke-dashoffset: -480;
+    }
+  }
