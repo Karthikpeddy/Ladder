@@ -10,7 +10,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center h-20">
         <div className="flex items-center">
   <a href="#" className="text-2xl font-bold text-gray-900">
-    &lt;div&gt;
+    &lt;/div&gt;
   </a>
 </div>
 
@@ -19,10 +19,12 @@ export default function Navbar() {
             <a href="#services" className="text-gray-600 hover:text-gray-900">Services</a>
             <a href="#work" className="text-gray-600 hover:text-gray-900">Work</a>
             <a href="#process" className="text-gray-600 hover:text-gray-900">Process</a>
-            <button className="bg-black text-white px-6 py-2 rounded-full flex items-center gap-2 hover:bg-gray-800 transition-colors">
-              Let's Talk <ArrowUpRight size={18} />
-            </button>
+            <button className="group flex items-center gap-2 bg-black text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:bg-black transition-all hover:white hover:scale-105">
+            Let's Talk
+            <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+          </button>
           </div>
+          
 
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600">

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Custom styles for revolving dash animation */
+/* Custom styles for revolving dash animation */
+.glassy-text {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeInAndGlow 1.5s ease-out forwards, shine 3s linear infinite;
+  }
+  .spark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: spark 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    filter: blur(2px);
+  }
+  
+  
+  
+  
