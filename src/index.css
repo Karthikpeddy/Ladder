@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Custom styles for revolving dash animation */
+/* Custom styles for revolving dash animation */
+.glassy-text {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(90deg, #ffffff, #000000, #ffffff);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeInAndGlow 1.5s ease-out forwards, shine 3s linear infinite;
+  }
+  .view-work-btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: black; /* Button background color */
+    /* Line color (white) */
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .view-work-btn svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: white; /* Set the line color to white */
+    stroke-width: 3px; /* Line thickness */
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: stroke-dashoffset 0.3s ease; /* Smooth reset */
+  }
+  
+  .view-work-btn span {
+    color: white; /* Text color */
+    font-size: 18px;
+    font-weight: 600; /* Semi-bold font */
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Hover State */
+  .view-work-btn:hover svg {
+    animation: dashLoop 2s ease-in-out infinite alternate; /* Animation activates on hover */
+  }
+  
+  /* Keyframes for back-and-forth animation */
+  @keyframes dashLoop {
+    from {
+      stroke-dashoffset: 150;
+    }
+    to {
+      stroke-dashoffset: -480;
+    }
+  }

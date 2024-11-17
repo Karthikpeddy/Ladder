@@ -29,5 +29,12 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
-  }
+  },
+  "dependencies": {
+      "tailwindcss": "^2.x",
+      "postcss": "^8.x",
+      "autoprefixer": "^10.x"
+    }
+  
+  
 }
